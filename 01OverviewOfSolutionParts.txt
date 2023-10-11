@@ -1,0 +1,24 @@
+-UI
+	- Blazoe
+	- MAUI
+	- Angular
+	- Etc...
+
+-API
+	- REST API
+
+-Infrastructure
+	- Email
+	- Logging
+	- Data Access
+	- Messaging
+
+-Tests
+	-Unit
+	-Integration
+
+
+Application's core will have
+ -Core
+ -Entities
+ -Application Interfaces

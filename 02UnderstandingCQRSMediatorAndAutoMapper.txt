@@ -1,0 +1,72 @@
+Automapper
+----------
+- Converts complex datatyoes with ease
+- Can be used in several parts of the applications
+- Saves time spent on writing manual mapping code
+- Might lead to performance and debugging issues
+
+To add Automapper.
+
+Application Project -> manage nuget packages -> 
+ add AutoMapper
+ add AutoMapper.Extensions.Microsoft.DependencyInjection
+
+CQRS
+----
+Command Query Responsibility Segregation, is a software architectural pattern that separates the 
+responsibilities of handling commands (changing data) and queries (reading data) within an application. 
+This separation is intended to improve the overall performance, scalability, and maintainability of the system, 
+especially in complex and highly distributed applications.
+
+Command: This part of CQRS deals with the operations that modify the application's state. 
+Commands are typically responsible for creating, updating, or deleting data. When a user initiates an action 
+that changes the system's state (e.g., creating a new record), a command is generated and sent to the 
+appropriate command handler.
+
+Query: On the other hand, queries are responsible for retrieving data from the application's state. 
+When a user wants to view information (e.g., fetching a list of records), a query is executed, 
+often by querying a read model or a database specifically optimized for queries.
+
+Responsibility Segregation: In traditional architectures, both commands and queries are often handled 
+by the same data model or service. CQRS segregates these responsibilities, meaning that you have separate 
+components or services to handle commands and queries. This separation allows each side to be optimized for 
+its specific use case.
+
+Event Sourcing: CQRS is often used in conjunction with event sourcing. Event sourcing involves storing 
+the history of all changes to the application's state as a series of events. These events are then used 
+to build the current state of the application. Event sourcing can help maintain a complete audit trail 
+of changes and enables temporal queries.
+
+Benefits: CQRS offers several benefits, including:
+
+- Performance: Commands can be optimized for write-intensive operations, while queries can be optimized 
+for read-heavy workloads. This can lead to better overall system performance.
+
+- Scalability: As commands and queries are separated, you can independently scale the parts of your 
+application that need it most. For example, you can scale up the command side during periods of high write activity.
+
+- Flexibility: CQRS allows you to use different storage mechanisms or databases for the command and query sides. 
+This flexibility can be useful when dealing with different data access patterns.
+
+- Complexity: While CQRS offers many advantages, it can introduce complexity into your application architecture. 
+You need to carefully design and manage the flow of data between the command and query sides. 
+Additionally, event sourcing and maintaining consistency between the command and query sides can be challenging.
+
+CQRS is a pattern that is often used in combination with other architectural patterns like Event Sourcing 
+and can be a good fit for systems where performance and scalability are critical concerns, especially 
+in domains with complex and evolving business logic. However, it may not be necessary for all applications, 
+and its adoption should be carefully considered based on the specific requirements of the project.
+
+Mediator Pattern
+----------------
+
+[Query/Command model] -> (Mediator) -> Handler1
+								|
+								.->Handler2
+
+To add mediator												| This package
+Application Project -> manage nuget packages ->				| has been
+ add MediatR.Extensions.Microsoft.DependencyInjection		| deprecated
+
+ add MediatR
+ 

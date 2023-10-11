@@ -1,0 +1,53 @@
+DEvelop API.
+- Review Dependency Injection
+- Ccreate DAtabase using EF core commands
+- Develop thin controllers using mediatR
+- Implement remaining features
+
+Set API Project as Startup project
+
+Install Mircrosoft.EntityFrameworkCore.Tools in API Project.
+
+in PM set Persistence project as default project
+PM> add-migration InitialMigration
+
+
+Fat vs Thin Controller
+----------------------
+
+In the context of web application development and the Model-View-Controller (MVC) architectural pattern, 
+"thin controller" and "fat controller" are terms used to describe the distribution of responsibilities 
+within the controller component of the application.
+
+Thin Controller:
+Responsibilities: In a "thin controller" approach, the controller's primary responsibility is to handle 
+the flow of control, route requests to the appropriate actions or methods, and pass data between the model 
+and the view. It typically contains minimal business logic.
+
+Advantages: A thin controller adheres to the principle of separation of concerns, making the codebase more 
+maintainable and easier to understand. It promotes a clean and organized structure where business logic is 
+separated into the model layer.
+
+Best Practices: In a thin controller approach, it's common to move most of the business logic, validation, 
+and data manipulation to the model or other dedicated service classes. The controller mainly focuses on 
+handling HTTP requests and responses.
+
+Fat Controller:
+Responsibilities: In a "fat controller" approach, the controller takes on a significant amount of business 
+logic, data manipulation, and decision-making responsibilities. It tends to grow in size and complexity as 
+more functionality is added to it.
+
+Drawbacks: Having a fat controller can lead to code that is difficult to maintain, test, and understand. 
+It violates the single responsibility principle, making the codebase less modular and more error-prone.
+
+Common Issues: Fat controllers often result from developers placing too much logic in the controller, which 
+can lead to code duplication and decreased reusability.
+
+In general, the goal in web application development is to have "thin controllers" and "fat models." This means 
+that most of the business logic should reside in the model layer, which represents the application's 
+data and business rules. The controller's role is to route requests and manage the interaction between 
+the client (browser) and the model.
+
+By following this separation of concerns, you can achieve a more maintainable, testable, and organized codebase. 
+It also allows for better code reuse and easier collaboration among developers working on different 
+parts of the application.

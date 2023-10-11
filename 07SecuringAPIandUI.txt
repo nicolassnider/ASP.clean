@@ -1,0 +1,39 @@
+Identity Service Core allows to add robust aout-of-the-box security features to a core application
+
+in this project the API and the UI will be secured
+
+in Application.Contracts add a new folder for Identity.
+in Application.Models add a new folder for Identity
+
+Create a new class library project in the infrastructure folder called Identity.
+add a reference to Application
+
+add
+Microsoft.AspNetCore.Identity.UI
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+Microsoft.Extensions.Options.ConfigurationExtensions
+
+
+in Identity add a DbContext folder 
+
+in API add reference to Identity
+
+check JwtSettings in appsettings.json
+
+add Configuration for IDentityServices int api Program.cs
+
+in program add app.UseAuthentication(); before app.UseAuthorization();
+
+in API add a AuthController
+
+run migrations and update database from Identity with the -Context HrLeaveManagementIdentityDbContext parameter
+
+
+ADD Authentication Services to Blazor
+
+add Blazored.LocalStorage to blazorui project, register in program.cs, inject in basehttpservice.cs
+
+
+

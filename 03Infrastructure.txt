@@ -1,0 +1,20 @@
+This layer will have
+
+- Implementations of contracts
+	. Repository implementations
+
+- Entity Framework Core
+- Third party Services
+	. Email
+	. Logging: Blocks of text that most applications produce during runtime.
+		Human readable mini reports about what is happening in the application.
+		Allow us t obe able to track and trace error that occur in ouw applications
+		_Information - Standard log level used when something has happened as expected
+		_Debug - a very informational log level that is more than we might need for everyday use
+		_Warning - this log level indicates that something has happened that is not an error but is not normal
+		_Error - Usually created when an exception is encountered
+
+
+To install EF Core.
+ - Add Microsoft.EntityFrameworkCore.SQLServer
+ - Add MIcrosoft.Extensions.Options.ConfigurationExtensions

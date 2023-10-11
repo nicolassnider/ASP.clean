@@ -1,0 +1,10 @@
+Adding the UI
+-------------
+
+- using Blazor: :.NET Single Page Application development framework
+- using NSwag and NSwag studio: Generate API Integration code
+- Configuring JWT Security
+	. Admin and Employee Roles
+- Setup UI for Leave management features
+
+Pages are based on components

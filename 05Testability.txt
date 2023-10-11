@@ -1,0 +1,11 @@
+- Automated Tests.
+	. Unit and Integration Testing
+	. Xunit - Testing framework
+	. Moq - Mocking framework
+	. Shouldy - Assertions based on Fluent API
+
+
+Packages:
+Add Moq
+
+Add reference to Application
